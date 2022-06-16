@@ -5,6 +5,8 @@
     <title>Book</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <script src="javascripts/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
 </head>
 <body>
 <div class="border">
@@ -14,10 +16,34 @@
         </div>
         <br/>
         <fieldset>
-            <legend> Booking Details </legend>
+            <legend> Book the Room </legend>
+            <div id ="all">
+                <span>
+                <div id="searchDiv">
+                    <p>Please Choose Arrival Date & Leave Date </p>
+                     <label for="Arrival">Arrival Date <span>*</span></label>
+                        <input id="Arrival" type="date" name="Arrival" />
+                            <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="item">
+                    <label for="Leave">Leave Date <span>*</span></label>
+                        <input id="Leave" type="date" name="Leave" />
+                            <i class="fas fa-calendar-alt"></i>
+                </div>
+                    <p>Please Choose Room Type </p>
+                    <select>
+                        <option value="All">All</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Deluxe">Deluxe</option>
+                        <option value="Suite">Suite</option>
+                    </select>
+                    <br /><br />
+
+                </div>
+            </span>
 
             <div class="block">
-                <button type="SignIn" href="/">Commit</button>
+                <button onclick="check()">Check</button>
             </div>
         </fieldset>
         <br/>
