@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="stylesheets/style.css">
     <script src="javascripts/home.js"></script>
 </head>
-<body>
+<body onload="loadList()">
 <div class="border">
     <form>
         <div class="border1">
@@ -14,22 +14,28 @@
         </div>
         <br/>
         <fieldset>
-            <legend> User Login</legend>
-            <div class="item">
-                <label for="username">Username<span>*</span></label>
-                <input id="username" type="text" name="username" />
-            </div>
-            <div class="item">
-                <label for="password">Password<span>*</span></label>
-                <input id="password" type="text"   name="password" required/>
-            </div>
-            <div class="block">
-                <button type="SignIn" href="/">Commit</button>
+            <legend> Recent Book Details </legend>
+            <div id="all">
+                <h1 id="his" class="middle" value="history">History</h1>
+                <hr>
+                <br/><br/>
+                <pre class="middle">Username          Room ID        Room Type           Arrival Date         Leave Date</pre>
+                <div id="history" class="middle" v-for="item in list">
+                    <pre>{{item.username}}    {{item.room_ID}}    {{item.room_type}}    {{item.arrival_time}}   {{item.leave_time}}</pre>
+                </div>
             </div>
         </fieldset>
         <br/>
     </form>
 </div>
+<script>
+    var load = new Vue({
+        el: '#all',
+        data: {
+            list: [],
+        }
+    });
+</script>
 </body>
 </html>
 </html>
