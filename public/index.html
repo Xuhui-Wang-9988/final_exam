@@ -1,18 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>main</title>
+    <title>Hotel Booking System</title>
     <link rel="stylesheet" href="stylesheets/style.css">
     <script src="javascripts/home.js"></script>
-<!--    <link href="images/hotel.png" rel = "icon">-->
 </head>
-<body style="background-color: #aaf1a4">
-    <h1 class="middle">Welcome</h1>
-    <hr>
-    <br/><br/>
-    <div id="main" class="middle">
-        <pre><button onclick="toSearch()">Order</button>     <button onclick="toHistory()">View history</button></pre>
-    </div>
+<body>
+<div class="border">
+    <form>
+        <div class="border1">
+            <h1>Welcome to Hotel Booking System</h1>
+        </div>
+        <br/>
+        <fieldset>
+            <legend> User Login</legend>
+                <div class="item">
+                    <label for="username">Username<span>*</span></label>
+                    <input id="username" type="text" name="username" />
+                </div>
+                <div class="item">
+                    <label for="password">Password<span>*</span></label>
+                    <input id="password" type="text"   name="password" required/>
+                </div>
+                <div class="block">
+                    <button type="SignIn" href="/">Commit</button>
+                </div>
+        </fieldset>
+        <br/>
+    </form>
+</div>
 </body>
 </html>
